@@ -3,10 +3,21 @@
 <ul>
   <li *ngFor="let product of products">
     <h3>
-      <a href="" [title]="product.name + ' details'">{{ product.name }}</a>
+      <a
+        [title]="product.name + ' details'"
+        [routerLink]="['/products', product.id]"
+      >
+        {{ product.name }}
+        <span>{{ product.productReleaseYear }}</span>
+        <span>{{ productStockStatus }}</span>
+      </a>
     </h3>
     <p *ngIf="product.description">Description: {{ product.description }}</p>
     <button type="button" (click)="share()">Share</button>
+    <app-product-alerts
+      [product]="product"
+      (notify)="onNotify()"
+    ></app-product-alerts>
   </li>
 </ul>
 
