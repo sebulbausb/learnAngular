@@ -80,6 +80,12 @@ label {
   background-color: #1976d2;
   color: white;
   border: none;
+  user-select: none;
+}
+
+.button.active {
+  background-color: pink;
+  color: black;
 }
 
 .button:hover, button:hover {

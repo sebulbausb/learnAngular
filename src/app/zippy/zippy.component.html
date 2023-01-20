@@ -1,0 +1,8 @@
+<div class="zippy" (click)="toggle($event)">
+  <header class="header">
+    {{ title }}
+  </header>
+  <section *ngIf="isExpanded" class="body">
+    <ng-content></ng-content>
+  </section>
+</div>

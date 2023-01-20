@@ -1,0 +1,16 @@
+.fancy-button i.material-icons.like {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 67px;
+  display: flex;
+  align-items: center;
+
+  &.active {
+    color: deeppink;
+  }
+}
+
+.likes-nr {
+  color: black;
+  font-size: 30px;
+}
